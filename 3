@@ -1,0 +1,17 @@
+public class ArrayCopy {
+    public static void main(String[] args) {
+        int[] originalArray = {5, 10, 15, 20, 25};
+        int[] copiedArray = new int[originalArray.length];
+
+        // Copierea elementelor din originalArray în copiedArray
+        for (int i = 0; i < originalArray.length; i++) {
+            copiedArray[i] = originalArray[i];
+        }
+
+        // Afișarea elementelor copiate
+        System.out.println("Elementele array-ului copiat sunt:");
+        for (int num : copiedArray) {
+            System.out.println(num);
+        }
+    }
+}
