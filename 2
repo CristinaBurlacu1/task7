@@ -1,0 +1,64 @@
+public class OneDimensionalArray {
+    public static void main(String[] args) {
+        int[] array = {12, 45, 67, 23, 56, 78, 90};
+        int sum = 0;
+        int evenCount = 0;
+        int oddCount = 0;
+
+        // Calcularea sumei, numărul de elemente pare și impare
+        for (int num : array) {
+            sum += num;
+            if (num % 2 == 0) {
+                evenCount++;
+            } else {
+                oddCount++;
+            }
+        }
+
+        // Calcularea mediei
+        double average = (double) sum / array.length;
+
+        // Afișarea rezultatelor
+        System.out.println("Suma elementelor este: " + sum);
+        System.out.println("Media elementelor este: " + average);
+        System.out.println("Numărul de elemente pare: " + evenCount);
+        System.out.println("Numărul de elemente impare: " + oddCount);
+    }
+}
+
+public class TwoDimensionalArray {
+    public static void main(String[] args) {
+        int[][] array = {
+            {12, 45, 67},
+            {23, 56, 78},
+            {90, 21, 34}
+        };
+        
+        int sum = 0;
+        int evenCount = 0;
+        int oddCount = 0;
+        int totalElements = 0;
+
+        // Calcularea sumei și numărul de elemente pare/impare
+        for (int[] row : array) {
+            for (int num : row) {
+                sum += num;
+                totalElements++;
+                if (num % 2 == 0) {
+                    evenCount++;
+                } else {
+                    oddCount++;
+                }
+            }
+        }
+
+        // Calcularea mediei
+        double average = (double) sum / totalElements;
+
+        // Afișarea rezultatelor
+        System.out.println("Suma elementelor este: " + sum);
+        System.out.println("Media elementelor este: " + average);
+        System.out.println("Numărul de elemente pare: " + evenCount);
+        System.out.println("Numărul de elemente impare: " + oddCount);
+    }
+}
